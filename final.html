@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans';
+    }
+    body{
+      background: #2c2c2c;  
+    }
+    .encabezado{
+        margin-top: 40px;
+      text-align: center;
+      color: #fff;
+    }
+    .encabezado2{
+        margin-top: 10px;
+      text-align: center;
+      color: #fff;
+    }
+    .encabezado3{
+        margin: 0 auto;
+      text-align: center;
+      background: black;
+      color: #fff;
+      width: 370px;
+      border-radius: 20px;
+      padding: 5px;
+      font-size: 15px;
+    }
+    .contenido{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid #fafafa10;
+        border-radius: 1rem;
+        background: #fafafa10;
+        backdrop-filter: blur(0.4rem);
+        -webkit-backdrop-filter: blur(0.4rem);
+        color: #fff;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0,0.4);
+    }
+    .btn-wsp{
+    position: fixed;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+      bottom: 10px;
+      right: 10px;
+      background: #0df053;
+      color: #fff;
+      border-radius: 50px;                                
+      text-align: center;
+      font-size: 35px;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0,0.3);
+      z-index: 100;
+    }
+    .header{
+      text-align: center;
+      color: #fff;
+      background: #010111;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0,0.3);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="header"><h1>TIENDA JAGUAR SERVICE</h1></div>
+  <h1 class="encabezado">Gracias por su compra!</h1>
+  <h4 class="encabezado2">Su orden a sido copiada, puede enviarsela al WhatsApp de alguno de nuestros agentes!</h4>
+  <div id="texto-copiado" class="contenido"></div>
+  <div class="encabezado3"><h4>Puede tomar captura de pantalla de su pedido!</h4></div>
+
+
+  <a href="https://wa.me/?text=Hola,+este+es+mi+pedido" class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const texto = urlParams.get('texto');
+    document.getElementById('texto-copiado').innerText = texto;
+  </script>
+
+</body>
+</html>
