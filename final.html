@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Final</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--========================================ENLACES========================================-->
+  <link rel="stylesheet" href="final.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!--========================================COMPROBANTE========================================-->  
+  <h1 class="encabezado">Comprobante JAGUAR SERVICE</h1>
+  <h1 class="gracias">Gracias por su compra!!</h1>
+
+  <table id="tabla-comprobante">
+    <thead>
+      <tr class="header">
+        <th class="esquinai">Producto</th>
+        <th class="center">Prec.</th>
+        <th class="center">Cant.</th>
+        <th class="esquinad">Subt.</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-body">
+    </tbody>
+  </table>
+
+  <div id="total-general">Total: $<span id="total"></span></div>
+  <h1 class="captura">TOME CAPTURA DE PANTALLA DE SU COMPROBANTE</h1>
+
+<!--========================================BOTON WHATSAPP========================================-->  
+  <a href="https://wa.me/?text=Hola,+ya+tengo+el+pedido,+enseguida+le+envio+captura+de+pantalla+del+comprobante" class="btn-wsp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+<!--========================================CODIGO JAVASCRIPT========================================-->
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const texto = urlParams.get('texto');
+  const productos = JSON.parse(texto);
+  const tablaBody = document.getElementById('tabla-body');
+  const totalGeneralDiv = document.getElementById('total');
+
+  let totalGeneral = 0;
+
+  productos.forEach((producto) => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+    <td>${producto.titulo}</td>
+    <td>${producto.precio}</td>
+    <td>${producto.cantidad}</td>
+    <td>$${producto.subtotal.toLocaleString("en")}</td>
+    `;
+    tablaBody.appendChild(row);
+
+  // Sumar subtotal al total general
+  totalGeneral += producto.subtotal;
+  });
+
+  // Mostrar total general
+  totalGeneralDiv.textContent = totalGeneral.toLocaleString("en");
+  </script>
+</body>
+</html>
