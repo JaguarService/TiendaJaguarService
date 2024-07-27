@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jaguar Service</title>
+<!--========================================ENLACES========================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+<!--========================================MENU Y SECCION APP========================================-->
+<div class="modal">
+    <div class="modal-card">
+        <i class="fa-solid fa-times modal-close"></i>
+        <img class="modal-img" src="logo.jpg" alt="image">
+        <div>
+            <h3 class="modal-name">Jaguar Service App</h3>
+            <p class="modal-info">
+                Aplicación JaguarService con la que le será más fácil acceder a nuestro sitio. Solo disponible para android.
+            </p>
+            <div class="modal-buttons">
+                <button class="modal-button" onclick="location.href='JaguarServiceShop.apk'">Descargar App<i class="fa-solid fa-download"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar">
+    <div class="navbar-contenido">
+        <div class="logo"><a href="index.html">JaguarService Shop</a></div>
+        <ul class="menu-list">
+            <div class="icon cancel-btn">
+                <i class="fa-solid fa-times"></i>
+            </div>
+            <li><a href="index.html" class="menu-activo">Tienda</a></li>
+            <li><a  class="descarga-la-app" href="#">Descarga la app</a></li>
+        </ul>
+        <div class="icon menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</nav>        
+<!--========================================BANNER========================================-->    
+<header></header>
+<!--========================================SISTEMA COMPLETO========================================-->
+<section class="contenedor">
+    <div class="container">
+<!--========================================SECCION TIENDA CARRITO========================================-->         
+        <!--<div class="tab_box">
+            <button class="tab_btn active">Alimentos</button>
+            <button class="tab_btn">Aseo</button>
+            <button class="tab_btn">Carrito</button>
+            <div class="line"></div>
+        </div>-->
+        <div class="tab_box">
+            <!--<button class="tab_btn active">Alimentos</button>
+            <button class="tab_btn">Aseo</button>-->
+            <div class="dropdown">
+                <div class="select">
+                    <span class="selected">Alimentos y bebidas</span>
+                    <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                    <li class="dropact activedrop">Alimentos y bebidas</li>
+                    <li class="dropact">Aseo y limpieza</li>
+                </ul>
+            </div>
+
+            <button class="dropact tab_btn">Carrito</button>
+            <!--<div class="line"></div>-->
+        </div>
+<!--========================================TIENDA/CARRITO========================================-->         
+        <div class="content_box">
+<!--========================================ALIMENTOS & BEBIDAS========================================-->            
+            <div class="content active">
+<!--========================================FILTROS========================================-->
+                <div class="tab-nav-bar">
+                    <div class="tab-navigation">
+                        <i class="uil uil-angle-left left-btn"></i>
+                        <i class="uil uil-angle-right right-btn"></i>
+                        <ul class="tab-menu">
+                            <li class="tab-category actives" data-name="todos">Todos</li>
+                            <li class="tab-category" data-name="carnicos">Cárnicos</li>
+                            <li class="tab-category" data-name="bebidas">Bebidas</li>
+                            <li class="tab-category" data-name="lacteos">Lácteos</li>
+                            <li class="tab-category" data-name="granos">Granos</li>
+                            <li class="tab-category" data-name="pastas">Pastas</li>
+                            <li class="tab-category" data-name="varios">Varios</li>
+                        </ul>
+                    </div>
+                </div>
+<!--========================================PRODUCTOS========================================-->                
+                <div class="contenedor-items">
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Azúcar Blanca 1kg</span>
+                        <img src="img/21.png" alt="" class="img-item">
+                        <span class="precio-item">$3</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="lacteos">
+                        <span class="titulo-item">Leche en Polvo 310g</span>
+                        <img src="img/20.png" alt="" class="img-item">
+                        <span class="precio-item">$4</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="lacteos">
+                        <span class="titulo-item">leche cond. 390g</span>
+                        <img src="img/19.png" alt="" class="img-item">
+                        <span class="precio-item">$2.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="pastas">
+                        <span class="titulo-item">Coditos <br> 500g</span>
+                        <img src="img/3.png" alt="" class="img-item">
+                        <span class="precio-item">$1.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Aceite <br> 900ml</span>
+                        <img src="img/34.png" alt="" class="img-item">
+                        <span class="precio-item">$3</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="pastas">
+                        <span class="titulo-item">Spaghetti <br> 500g</span>
+                        <img src="img/5.png" alt="" class="img-item">
+                        <span class="precio-item">$1.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Mayonesa <br> 500g</span>
+                        <img src="img/6.png" alt="" class="img-item">
+                        <span class="precio-item">$2.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="bebidas">
+                        <span class="titulo-item">café <br> 250g</span>
+                        <img src="img/7.png" alt="" class="img-item">
+                        <span class="precio-item">$4.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="granos">
+                        <span class="titulo-item">arroz <br> 5lb</span>
+                        <img src="img/11.png" alt="" class="img-item">
+                        <span class="precio-item">$4</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Cartón de huevo 30u</span>
+                        <img src="img/9.png" alt="" class="img-item">
+                        <span class="precio-item">$10</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="carnicos">
+                        <span class="titulo-item">Carne de cerdo 10lb</span>
+                        <img src="img/10.png" alt="" class="img-item">
+                        <span class="precio-item">$29.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="granos">
+                        <span class="titulo-item">Frijol negro 1kg</span>
+                        <img src="img/39.png" alt="" class="img-item">
+                        <span class="precio-item">$3.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="carnicos">
+                        <span class="titulo-item">Paquete de pollo 10lb</span>
+                        <img src="img/13.png" alt="" class="img-item">
+                        <span class="precio-item">$15</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="bebidas">
+                        <span class="titulo-item">Cerveza cristal 6u</span>
+                        <img src="img/14.png" alt="" class="img-item">
+                        <span class="precio-item">$6</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="carnicos">
+                        <span class="titulo-item">Carne Enlatada 400g</span>
+                        <img src="img/22.png" alt="" class="img-item">
+                        <span class="precio-item">$2.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="bebidas">
+                        <span class="titulo-item">Malta Bucanero 6u</span>
+                        <img src="img/23.png" alt="" class="img-item">
+                        <span class="precio-item">$7.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="lacteos">
+                        <span class="titulo-item">Yogurt Fresa 120g 4u</span>
+                        <img src="img/24.png" alt="" class="img-item">
+                        <span class="precio-item">$3</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Sazón Iberia 10u</span>
+                        <img src="img/29.png" alt="" class="img-item">
+                        <span class="precio-item">$2.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Pasta Tomate 400g</span>
+                        <img src="img/26.png" alt="" class="img-item">
+                        <span class="precio-item">$2</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Chocolate en polvo 400g</span>
+                        <img src="img/41.png" alt="" class="img-item">
+                        <span class="precio-item">$3</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="carnicos">
+                        <span class="titulo-item">Salchichas 340g</span>
+                        <img src="img/17.png" alt="" class="img-item">
+                        <span class="precio-item">$2</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="carnicos">
+                        <span class="titulo-item">Jamón <br> 720g</span>
+                        <img src="img/30.png" alt="" class="img-item">
+                        <span class="precio-item">$5.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="carnicos">
+                        <span class="titulo-item">Mortadella <br> 1kg</span>
+                        <img src="img/38.png" alt="" class="img-item">
+                        <span class="precio-item">$5.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="bebidas">
+                        <span class="titulo-item">Jugo Manzana 200ml 6u</span>
+                        <img src="img/40.png" alt="" class="img-item">
+                        <span class="precio-item">$4.5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="bebidas">
+                        <span class="titulo-item">Refresco Cola 330ml 6u</span>
+                        <img src="img/37.png" alt="" class="img-item">
+                        <span class="precio-item">$5</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                    <div class="item" data-name="varios">
+                        <span class="titulo-item">Galletas Soda</span>
+                        <img src="img/35.png" alt="" class="img-item">
+                        <span class="precio-item">$4</span>
+                        <button class="boton-item">Agregar al Carrito</button>
+                    </div>
+                </div>    
+            </div>
+<!--========================================ASEO & LIMPIEZA========================================-->            
+            <div class="content">
+<!--========================================CATEGORIAS========================================-->       
+                    <div class="tab-nav-bar">
+                        <div class="tab-navigation">
+                            <ul class="tab-menu">
+                                <li class="tab-category actives" data-name="todos">Todos</li>
+                                <li class="tab-category" data-name="aseo">Aseo</li>
+                                <li class="tab-category" data-name="limpieza">Limpieza</li>
+                            </ul>
+                        </div>
+                    </div>    
+<!--========================================PRODUCTOS========================================-->                
+                    <div class="contenedor-items">
+                        <div class="item" data-name="limpieza">
+                            <span class="titulo-item">Detergente líquido 1l</span>
+                            <img src="img/42.png" alt="" class="img-item">
+                            <span class="precio-item">$2.5</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+                        <div class="item" data-name="aseo">
+                            <span class="titulo-item">Jabón Natural 75g 6u</span>
+                            <img src="img/45.png" alt="" class="img-item">
+                            <span class="precio-item">$3.5</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+                        <div class="item" data-name="aseo">
+                            <span class="titulo-item">Papel sanitario 4u</span>
+                            <img src="img/43.png" alt="" class="img-item">
+                            <span class="precio-item">$3</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+                        <div class="item" data-name="limpieza">
+                            <span class="titulo-item">Detergente en polvo 400g</span>
+                            <img src="img/44.png" alt="" class="img-item">
+                            <span class="precio-item">$1.5</span>
+                            <button class="boton-item">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                </div>
+<!--========================================CARRITO========================================-->         
+            <div class="content">
+                <p class="car-vac"  id="mensaje-carrito"><br><br>El carrito esta vacio.<br> Vaya a la tienda y agregue algun producto.</p>
+                <div class="carrito">
+                    <div class="header-carrito">
+                        <h2>Tu Carrito</h2>
+                    </div>
+                    <div class="carrito-items">
+                        <!--
+                        <div class="carrito-item">
+                            <img src="img/1.png" alt="" width="80px">
+                            <div class="carrito-item-detalles">
+                                <span class="carrito-item-titulo">Paquete Pollo</span>
+                                <div class="selector-cantidad">
+                                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                                </div>
+                                <span class="carrito-item-precio">$20</span>
+                                <span class="carrito-item-subtotal">$20</span>
+                            </div>
+                            <span class="btn-eliminar">
+                                <i class="fa-solid fa-trash"></i>
+                            </span>
+                        </div>
+                        <div class="carrito-item">
+                            <img src="img/2.png" alt="" width="80px">
+                            <div class="carrito-item-detalles">
+                                <span class="carrito-item-titulo">Botella Aceite</span>
+                                <div class="selector-cantidad">
+                                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                                </div>
+                                <span class="carrito-item-precio">$10</span>
+                                <span class="carrito-item-subtotal">$10</span>
+                            </div>
+                            <span class="btn-eliminar">
+                                <i class="fa-solid fa-trash"></i>
+                            </span>
+                        </div>
+                        -->
+                    </div> 
+                    <div class="carrito-total">
+                        <div class="fila">
+                            <strong>Tu Total</strong>
+                            <span class="carrito-precio-total">$0</span>
+                        </div>
+                        <button id="pagar-button" class="btn-pagar">Generar comprobante <i class="fa-solid fa-bag-shopping"></i></button>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</section>  
+<!--========================================BOTON FLOTANTE CARRITO========================================-->
+<button class="btnlink">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <div class="cart-counter">0</div>
+</button>
+</body>
+</html>
+
+
