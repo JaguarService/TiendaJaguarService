@@ -35,7 +35,7 @@ tr{
     cursor: pointer;
 }
 th, td{
-    padding: 1px 5px 1px 7px;
+    padding: 2px 5px 2px 7px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
